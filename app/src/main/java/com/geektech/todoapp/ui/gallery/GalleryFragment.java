@@ -42,7 +42,7 @@ public class GalleryFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         recyclerView = view.findViewById(R.id.recycler_view);
-        recyclerView.setLayoutManager(layoutManager);
+//        recyclerView.setLayoutManager(layoutManager);
         AdapterAdapter adapter = new AdapterAdapter();
         recyclerView.setAdapter(adapter);
         adapter.addStudents();
