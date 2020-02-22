@@ -45,6 +45,6 @@ public class GalleryFragment extends Fragment {
 //        recyclerView.setLayoutManager(layoutManager);
         AdapterAdapter adapter = new AdapterAdapter();
         recyclerView.setAdapter(adapter);
-        adapter.addStudents();
+//        adapter.addStudents();
     }
 }
