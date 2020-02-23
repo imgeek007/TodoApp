@@ -12,9 +12,11 @@ import android.widget.Button;
 import com.geektech.todoapp.MainActivity;
 import com.geektech.todoapp.Prefs;
 import com.geektech.todoapp.R;
+import com.google.android.material.tabs.TabLayout;
 
 public class OnBoardActivity extends AppCompatActivity {
-    
+
+    private TabLayout tabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +24,10 @@ public class OnBoardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_on_board);
         ViewPager viewPager = findViewById(R.id.viewPager);
         viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager()));
-
+        tabLayout = findViewById(R.id.tabDots);
+        tabLayout.setupWithViewPager(viewPager, true);
     }
+
 
     public void onSkip(View v) {
         Prefs.getInstance(this).saveShown();
